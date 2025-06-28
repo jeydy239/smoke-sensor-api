@@ -1,0 +1,13 @@
+{
+  "name": "smoke-sensor-api",
+  "version": "1.0.0",
+  "description": "API para sensor de humo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0"
+  }
+}
