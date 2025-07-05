@@ -1,15 +1,19 @@
-// index.js
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const sensorRoutes = require('./routes/sensor');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
+// ✅ Habilitar JSON parser
 app.use(bodyParser.json());
 
-// Usa las rutas del sensor
+// ✅ Ruta base para la raíz "/"
+app.get('/', (req, res) => {
+  res.send('✅ API Smoke Sensor Activa!');
+});
+
+// ✅ Rutas del sensor
 app.use('/api/sensor', sensorRoutes);
 
 app.listen(PORT, () => {
